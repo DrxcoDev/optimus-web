@@ -7,22 +7,29 @@ const { title } = Astro.props;
 
 
 import '@fontsource/twinkle-star';
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<!-- <meta name="description" content="Astro description" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<!-- <title>{title}</title> -->
 
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://optimusjs.netlify.app/">
 		<meta property="og:title" content="Fast with Optimus">
 		<meta property="og:description" content="A fastest framework for a fast website">
+
+		<SEO
+			title='Optimus Framework'
+			description="The fastest framework of JavaScript"
+		
+		/>
 	</head>
 	<body>
 		<slot />
